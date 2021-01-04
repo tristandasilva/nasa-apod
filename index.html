@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API Pictures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./imgs/favicon.png">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader hidden">
+        <img src="imgs/rocket.svg" alt="Rocket Loading SVG">
+    </div>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav-container">
+            <span class="background"></span>
+            <!-- Results Nav -->
+            <span class="navigation-items" id="results-nav">
+                <h3 class="clickable" onclick="getNasaImages()">Load More</h3>
+                <h3 id="separator">&nbsp;&nbsp;&nbsp;<i class="fas fa-user-astronaut"></i>&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="clickable" onclick="updateDOM('favourites')">Favourites</h3>
+            </span>
+            <!-- Favourites Nav -->
+            <span class="navigation-items hidden" id="favourites-nav">
+                <h3 class="clickable" onclick="getNasaImages()">Load More Images</h3>
+            </span>
+         </div>
+        <!-- Images Container -->
+        <div class="images-container"></div>
+    </div>
+    <!-- Added To Favourites Notification -->
+    <div class="save-confirmed" hidden>
+        <h1>ADDED!</h1>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
